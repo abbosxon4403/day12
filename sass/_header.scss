@@ -1,0 +1,189 @@
+.header {
+    padding: 20px 0;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header__list {
+            display: flex;
+            list-style-type: none;
+            max-width: 487px;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .header__item-link {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            /* identical to box height, or 16px */
+            /* Чорний */
+            color: #282B22;
+            text-decoration: none;
+        }
+        .header__socials {
+            font-size: 0;
+            display: flex;
+            max-width: 50px;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .header__tel {
+            display: flex;
+            text-decoration: none;
+            white-space: nowrap;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 100%;
+            /* identical to box height, or 20px */
+            text-transform: uppercase;
+            /* Зелений */
+            color: #3D4A39;
+            &::before {
+                content: '';
+                display: block;
+                width: 13px;
+                height: 20px;
+                background-image: url(/img/samsung2.png);
+                margin-right: 12px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+.hero {
+    color: #ffffff;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) -13.19%, rgba(0, 0, 0, 0.85) 94.01%), url(/img/hero__img.png);
+    padding-bottom: 63px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__container {
+        padding-top: 120px;
+        padding-bottom: 61px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__heading {
+        max-width: 446px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    &__text {
+        max-width: 537px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 150%;
+        text-align: center;
+        color: #FFFFFF;
+        opacity: 0.8;
+    }
+    &__btn {
+        padding-top: 22px;
+        padding-bottom: 22px;
+        padding-left: 56px;
+        padding-right: 49px;
+        background-color: #ae7b3c;
+        // font styles
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+        color: #FFFFFF;
+        border: none;
+        margin-top: 72px;
+        margin-bottom: 120px;
+        &:active {
+            background-color: #ae7b3c;
+            opacity: 0.9;
+        }
+    }
+    &__line {
+        display: inline-block;
+        width: 1200px;
+        height: 1px;
+        background-color: #ffffff;
+    }
+    &__last {
+        display: flex;
+        padding-top: 45px;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .hero__button {
+        background-color: transparent;
+        border: none;
+        &:active {
+            border-radius: 50%;
+            background-color: #4242ee;
+        }
+        .arrow--rotate {
+            transform: rotate(180deg);
+        }
+    }
+    .hero__numbers {
+        &-span {
+            padding: 8px 11px;
+            border: 3px solid #424242;
+            border-radius: 50%;
+            margin-right: 15px;
+            &:last-child {
+                margin: 0;
+            }
+            &:active {
+                border: 3px solid #ffffff;
+            }
+        }
+    }
+}
+
+// responsive 
+@media only screen and (max-width: 1000px) {
+    .main-container {
+        max-width: 1000px;
+        .container {
+            max-width: 960px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .header__line {
+            max-width: 960px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+    .header {
+        &__tel {
+            white-space: nowrap;
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .header {
+        max-width: 640px;
+        .header__list {
+            display: none;
+        }
+        .header__menu {
+            width: 25px;
+            height: 20px;
+            background-image: url(/img/menu.png);
+        }
+        .header__list--second {
+            display: none;
+        }
+        .display-b {
+            display: block;
+        }
+    }
+}
